@@ -84,13 +84,24 @@ namespace MaximumUsingGenricTesting
         }
 
         /// <summary>
-        /// Givens the maximum string when at first poistion then return same string.
+        /// Givens the maximum string when at second poistion then return same string.
         /// </summary>
         [TestMethod]
         public void GivenMaxString_WhenAtSecondPoistion_ThenReturnSameString()
         {
             string expected = "Peach";
             string maxString = MaximumNumberCheck.MaximumString("Apple", "Peach", " Banana");
+            Assert.AreEqual(expected, maxString);
+        }
+
+        /// <summary>
+        /// Givens the maximum string when at third poistion then return same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxString_WhenAtThirdPoistion_ThenReturnSameString()
+        {
+            string expected = "Peach";
+            string maxString = MaximumNumberCheck.MaximumString("Apple", "Banana", "Peach");
             Assert.AreEqual(expected, maxString);
         }
     }
