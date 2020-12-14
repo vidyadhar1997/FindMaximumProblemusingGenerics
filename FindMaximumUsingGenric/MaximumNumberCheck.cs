@@ -6,7 +6,7 @@ namespace FindMaximumUsingGenric
 {
     public class MaximumNumberCheck
     {
-        /// <summary>
+       /* /// <summary>
         /// Maximum integer number methode for Maximum integer number 
         /// </summary>
         /// <param name="firstValue">The first value.</param>
@@ -54,9 +54,9 @@ namespace FindMaximumUsingGenric
                 return thirdValue;
             }
             throw new Exception("firstValue,secondValue,thirdValue are same");
-        }
+        }*/
 
-        /// <summary>
+        /*/// <summary>
         /// Maximum string methode for find max string.
         /// </summary>
         /// <param name="firstValue">The first value.</param>
@@ -79,7 +79,7 @@ namespace FindMaximumUsingGenric
                 return thirdString;
             }
             throw new Exception("firstString,secondString,thirdString are same");
-        }
+        }*/
 
         /// <summary>
         /// Finds maximum is genric methode to find max number for integer,string,float values.

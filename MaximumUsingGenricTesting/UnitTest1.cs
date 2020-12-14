@@ -7,101 +7,101 @@ namespace MaximumUsingGenricTesting
     public class UnitTest1
     {
         /// <summary>
-        /// Givens the maximum number when integer at first position then return same number.
+        /// Givens the maximum number when integer at first position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxIntegerNumber_WhenAtFirstPosition_ThenReturnSameNumber()
+        public void GivenMaxIntegerNumber_WhenAtFirstPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             int expected = 800;
-            int maxNumber = MaximumNumberCheck.maximumIntegerNumber(800, 700, 600);
+            int maxNumber = MaximumNumberCheck.findMaximum<int>(800, 700, 600);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum number when integer at second position then return same number.
+        /// Givens the maximum number when integer at second position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxIntegerNumber_WhenAtSecondPosition_ThenReturnSameNumber()
+        public void GivenMaxIntegerNumber_WhenAtSecondPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             int expected = 800;
-            int maxNumber = MaximumNumberCheck.maximumIntegerNumber(700, 800, 600);
+            int maxNumber = MaximumNumberCheck.findMaximum<int>(700, 800, 600);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum number when integer at second position then return same number.
+        /// Givens the maximum number when integer at second position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxIntegerNumber_WhenAtThirdPosition_ThenReturnSameNumber()
+        public void GivenMaxIntegerNumber_WhenAtThirdPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             int expected = 800;
-            int maxNumber = MaximumNumberCheck.maximumIntegerNumber(700, 600, 800);
+            int maxNumber = MaximumNumberCheck.findMaximum<int>(700, 600, 800);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum number is float when at first position then return same number.
+        /// Givens the maximum number is float when at first position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxFloatNumber_WhenAtFirstPosition_ThenReturnSameNumber()
+        public void GivenMaxFloatNumber_WhenAtFirstPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             double expected = 70.0;
-            double maxNumber = MaximumNumberCheck.maximumFloateNumber(70.0,60.0,50.0);
+            double maxNumber = MaximumNumberCheck.findMaximum<double>(70.0,60.0,50.0);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum float number when at second position then return same number.
+        /// Givens the maximum float number when at second position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxFloatNumber_WhenAtSecondPosition_ThenReturnSameNumber()
+        public void GivenMaxFloatNumber_WhenAtSecondPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             double expected = 70.0;
-            double maxNumber = MaximumNumberCheck.maximumFloateNumber(60.0, 70.0, 50.0);
+            double maxNumber = MaximumNumberCheck.findMaximum<double>(60.0, 70.0, 50.0);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum float number when at third position then return same number.
+        /// Givens the maximum float number when at third position then return same number UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxFloatNumber_WhenAtThirdPosition_ThenReturnSameNumber()
+        public void GivenMaxFloatNumber_WhenAtThirdPosition_ThenReturnSameNumberUsingGenricMethode()
         {
             double expected = 70.0;
-            double maxNumber = MaximumNumberCheck.maximumFloateNumber(60.0, 70.0, 50.0);
+            double maxNumber = MaximumNumberCheck.findMaximum<double>(60.0, 70.0, 50.0);
             Assert.AreEqual(expected, maxNumber);
         }
 
         /// <summary>
-        /// Givens the maximum string when at first poistion then return same string.
+        /// Givens the maximum string when at first poistion then return same string UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxString_WhenAtFirstPoistion_ThenReturnSameString()
+        public void GivenMaxString_WhenAtFirstPoistion_ThenReturnSameStringUsingGenricMethode()
         {
             string expected = "Peach";
-            string maxString=MaximumNumberCheck.MaximumString("Peach", "Apple", " Banana");
+            string maxString=MaximumNumberCheck.findMaximum<string>("Peach", "Apple", " Banana");
             Assert.AreEqual(expected,maxString);
         }
 
         /// <summary>
-        /// Givens the maximum string when at second poistion then return same string.
+        /// Givens the maximum string when at second poistion then return same string UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxString_WhenAtSecondPoistion_ThenReturnSameString()
+        public void GivenMaxString_WhenAtSecondPoistion_ThenReturnSameStringUsingGenricMethode()
         {
             string expected = "Peach";
-            string maxString = MaximumNumberCheck.MaximumString("Apple", "Peach", " Banana");
+            string maxString = MaximumNumberCheck.findMaximum<string>("Apple", "Peach", " Banana");
             Assert.AreEqual(expected, maxString);
         }
 
         /// <summary>
-        /// Givens the maximum string when at third poistion then return same string.
+        /// Givens the maximum string when at third poistion then return same string UsingGenricMethode.
         /// </summary>
         [TestMethod]
-        public void GivenMaxString_WhenAtThirdPoistion_ThenReturnSameString()
+        public void GivenMaxString_WhenAtThirdPoistion_ThenReturnSameStringUsingGenricMethode()
         {
             string expected = "Peach";
-            string maxString = MaximumNumberCheck.MaximumString("Apple", "Banana", "Peach");
+            string maxString = MaximumNumberCheck.findMaximum<string>("Apple", "Banana", "Peach");
             Assert.AreEqual(expected, maxString);
         }
     }
