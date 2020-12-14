@@ -55,6 +55,31 @@ namespace FindMaximumUsingGenric
             }
             throw new Exception("firstValue,secondValue,thirdValue are same");
         }
+
+        /// <summary>
+        /// Maximum string methode for find max string.
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns>maximum string</returns>
+        /// <exception cref="Exception">firstValue,secondValue,thirdValue are same</exception>
+        public static string MaximumString(string firstString, string secondString, string thirdString)
+        {
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
+            {
+                return firstString;
+            }
+            if (secondString.CompareTo(thirdString) > 0 && secondString.CompareTo(firstString) > 0)
+            {
+                return secondString;
+            }
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0)
+            {
+                return thirdString;
+            }
+            throw new Exception("firstString,secondString,thirdString are same");
+        }
     }
 }
 
