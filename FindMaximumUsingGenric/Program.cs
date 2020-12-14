@@ -6,7 +6,8 @@ namespace FindMaximumUsingGenric
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To The Find Maximum Using Genric Program");
+            int maxIntNumber=MaximumNumberCheck.maximumIntegerNumber(900, 900, 900);
+            Console.WriteLine(maxIntNumber);
         }
     }
 }
