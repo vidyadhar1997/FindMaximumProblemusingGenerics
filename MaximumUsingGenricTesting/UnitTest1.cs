@@ -16,5 +16,12 @@ namespace MaximumUsingGenricTesting
             int maxNumber = MaximumNumberCheck.maximumIntegerNumber(800, 700, 600);
             Assert.AreEqual(expected, maxNumber);
         }
+        [TestMethod]
+        public void GivenMaxNumber_WhenAtSecondPosition_ThenReturnSameNumber()
+        {
+            int expected = 800;
+            int maxNumber = MaximumNumberCheck.maximumIntegerNumber(700, 800, 600);
+            Assert.AreEqual(expected, maxNumber);
+        }
     }
 }
