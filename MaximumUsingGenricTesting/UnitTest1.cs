@@ -60,5 +60,16 @@ namespace MaximumUsingGenricTesting
             double maxNumber = MaximumNumberCheck.maximumFloateNumber(60.0, 70.0, 50.0);
             Assert.AreEqual(expected, maxNumber);
         }
+
+        /// <summary>
+        /// Givens the maximum float number when at third position then return same number.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxFloatNumber_WhenAtThirdPosition_ThenReturnSameNumber()
+        {
+            double expected = 70.0;
+            double maxNumber = MaximumNumberCheck.maximumFloateNumber(60.0, 70.0, 50.0);
+            Assert.AreEqual(expected, maxNumber);
+        }
     }
 }
