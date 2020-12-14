@@ -6,6 +6,14 @@ namespace FindMaximumUsingGenric
 {
     class MaximumNumberCheck
     {
+        /// <summary>
+        /// Maximums the integer number methode for Maximum integer number 
+        /// </summary>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns></returns>
+        /// <exception cref="Exception">firstValue,secondValue,thirdValue are same</exception>
         public static int maximumIntegerNumber(int firstValue, int secondValue, int thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
@@ -24,3 +32,4 @@ namespace FindMaximumUsingGenric
         }
     }
 }
+
