@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FindMaximumUsingGenric
 {
-    class MaximumNumberCheck
+    public class MaximumNumberCheck
     {
         /// <summary>
         /// Maximums the integer number methode for Maximum integer number 
