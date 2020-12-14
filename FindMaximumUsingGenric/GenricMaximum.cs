@@ -68,9 +68,9 @@ namespace FindMaximumUsingGenric
         /// </summary>
         /// <param name="values">The values.</param>
         /// <returns>last value of array</returns>
-        public T maxValue(params T[] values)
+        public static T maxValue(params T[] values)
         {
-            var sortedValues=Sort(values);
+            T[] sortedValues=Sort(values);
             return sortedValues[^1];
         }
 
@@ -79,7 +79,7 @@ namespace FindMaximumUsingGenric
         /// </summary>
         /// <param name="values">The values.</param>
         /// <returns></returns>
-        private T[] Sort(T[] values)
+        public static T[] Sort(T[] values)
         {
             Array.Sort(values);
             return values;

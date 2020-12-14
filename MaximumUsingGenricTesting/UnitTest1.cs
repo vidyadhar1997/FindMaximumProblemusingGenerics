@@ -202,5 +202,38 @@ namespace MaximumUsingGenricTesting
             string maxString = GenricMaximum<string>.testMaximum("Apple", "Banana", "Peach");
             Assert.AreEqual(expected, maxString);
         }
+
+        /// <summary>
+        /// Givens the maximum number when integer at first position then return same number UsingGenricClass.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxIntegerArray_WhenAtLastPosition_ThenReturnSameNumberUsingGenricClassAndMethod()
+        {
+            int[] array = { 600, 700, 800,900 };
+            int maxNumber = GenricMaximum<int>.maxValue(array);
+            Assert.AreEqual(900, maxNumber);
+        }
+
+        /// <summary>
+        /// Givens the maximum float number when at third position then return same number UsingGenricClass.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxFloatArray_WhenAtLastPosition_ThenReturnSameNumberUsingGenricClassAndMethod()
+        {
+            double [] array= { 60.0,70.0, 80.0, 90.0 };
+            double maxNumber = GenricMaximum<double>.maxValue(array);
+            Assert.AreEqual(90.0, maxNumber);
+        }
+
+        /// <summary>
+        /// Givens the maximum string when at third poistion then return same string UsingGenricMethode.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxStringArray_WhenAtLastPoistion_ThenReturnSameStringUsingGenricClassAndMethod()
+        {
+            string [] array= { "Apple", "Banana", "Cat", "Peach" };
+            string maxString = GenricMaximum<string>.maxValue(array);
+            Assert.AreEqual("Peach", maxString);
+        }
     }
 }
