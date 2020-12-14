@@ -4,20 +4,35 @@ using System.Text;
 
 namespace FindMaximumUsingGenric
 {
-    public class MaximumNumberCheck
+    public class GenricMaximum<T>where T:IComparable
     {
+        public T firstValue, secondValue, thirdValue;
+
         /// <summary>
-        /// Finds maximum is genric methode to find max number for integer,string,float values.
+        /// Parameterized constructor Initializes a new instance of the <see cref="GenricMaximum{T}"/> class.
         /// </summary>
-        /// <typeparam name="T"> T is Genric data type of int, float, string</typeparam>
         /// <param name="firstValue">The first value.</param>
         /// <param name="secondValue">The second value.</param>
         /// <param name="thirdValue">The third value.</param>
-        /// <returns>maximum int number/maximum float number/maximum string</returns>
-        /// <exception cref="Exception">firstValue,secondValue,thirdValue are same</exception>
-        public static T findMaximum<T>(T firstValue,T secondValue,T thirdValue) where T : IComparable
+        public GenricMaximum(T firstValue,T secondValue,T thirdValue)
         {
-            if(firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+        }
+
+        /// <summary>
+        /// Test maximum for find maximum value of int/float/string.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="firstValue">The first value.</param>
+        /// <param name="secondValue">The second value.</param>
+        /// <param name="thirdValue">The third value.</param>
+        /// <returns>maximum value int/float/string</returns>
+        /// <exception cref="Exception">firstValue,secondValue,thirdValue are same</exception>
+        public static T testMaximum<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
+        {
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                 firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
                 firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
             {
@@ -37,6 +52,15 @@ namespace FindMaximumUsingGenric
             }
             throw new Exception("firstValue,secondValue,thirdValue are same");
         }
+
+        /// <summary>
+        /// Max method for print the maximum value.
+        /// </summary>
+        /// <returns>max int/string/float value</returns>
+        public T maxMethod()
+        {
+            T max=GenricMaximum<T>.testMaximum(this.firstValue, this.secondValue, this.thirdValue);
+            return max;
+        }
     }
 }
-
