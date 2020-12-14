@@ -7,6 +7,7 @@ namespace FindMaximumUsingGenric
     public class GenricMaximum<T>where T:IComparable
     {
         public T firstValue, secondValue, thirdValue;
+        public T[] value;
 
         /// <summary>
         /// Parameterized constructor Initializes a new instance of the <see cref="GenricMaximum{T}"/> class.
@@ -14,11 +15,12 @@ namespace FindMaximumUsingGenric
         /// <param name="firstValue">The first value.</param>
         /// <param name="secondValue">The second value.</param>
         /// <param name="thirdValue">The third value.</param>
-        public GenricMaximum(T firstValue,T secondValue,T thirdValue)
+        public GenricMaximum(T firstValue,T secondValue,T thirdValue,T[] value)
         {
             this.firstValue = firstValue;
             this.secondValue = secondValue;
             this.thirdValue = thirdValue;
+            this.value = value;
         }
 
         /// <summary>
@@ -64,6 +66,17 @@ namespace FindMaximumUsingGenric
         }
 
         /// <summary>
+        /// Sort methode in that
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns></returns>
+        public static T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+
+        /// <summary>
         /// Max value methode for calling sort methode and return the last value of array.
         /// </summary>
         /// <param name="values">The values.</param>
@@ -75,14 +88,23 @@ namespace FindMaximumUsingGenric
         }
 
         /// <summary>
-        /// Sort methode in that
+        /// Gets the maximum value.
         /// </summary>
-        /// <param name="values">The values.</param>
+        /// <param name="value">The value.</param>
         /// <returns></returns>
-        public static T[] Sort(T[] values)
+        public static T GetMaxValue(params T[] value)
         {
-            Array.Sort(values);
-            return values;
+            T max = maxValue(value);
+            return max;
+        }
+
+        /// <summary>
+        /// Prints the maximum value.
+        /// </summary>
+        /// <returns></returns>
+        public T printMaxValue()
+        {
+            return GenricMaximum<T>.GetMaxValue(this.value);
         }
     }
 }
