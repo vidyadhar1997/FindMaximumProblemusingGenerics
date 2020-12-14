@@ -62,5 +62,27 @@ namespace FindMaximumUsingGenric
             T max=GenricMaximum<T>.testMaximum(this.firstValue, this.secondValue, this.thirdValue);
             return max;
         }
+
+        /// <summary>
+        /// Max value methode for calling sort methode and return the last value of array.
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns>last value of array</returns>
+        public T maxValue(params T[] values)
+        {
+            var sortedValues=Sort(values);
+            return sortedValues[^1];
+        }
+
+        /// <summary>
+        /// Sort methode in that
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns></returns>
+        private T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
     }
 }
