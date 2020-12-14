@@ -71,12 +71,27 @@ namespace MaximumUsingGenricTesting
             double maxNumber = MaximumNumberCheck.maximumFloateNumber(60.0, 70.0, 50.0);
             Assert.AreEqual(expected, maxNumber);
         }
+
+        /// <summary>
+        /// Givens the maximum string when at first poistion then return same string.
+        /// </summary>
         [TestMethod]
         public void GivenMaxString_WhenAtFirstPoistion_ThenReturnSameString()
         {
             string expected = "Peach";
             string maxString=MaximumNumberCheck.MaximumString("Peach", "Apple", " Banana");
             Assert.AreEqual(expected,maxString);
+        }
+
+        /// <summary>
+        /// Givens the maximum string when at first poistion then return same string.
+        /// </summary>
+        [TestMethod]
+        public void GivenMaxString_WhenAtSecondPoistion_ThenReturnSameString()
+        {
+            string expected = "Peach";
+            string maxString = MaximumNumberCheck.MaximumString("Apple", "Peach", " Banana");
+            Assert.AreEqual(expected, maxString);
         }
     }
 }
